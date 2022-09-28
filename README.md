@@ -59,3 +59,229 @@
                 if (key == '2' ) stroke(#6A5ACD);
                 if (key == '3' ) stroke(#E6005C);
             }
+
+## week02
+### 1.一張卡
+
+//畫卡片
+
+size(500,500);
+
+rect(90,90, 170, 270, 20);
+
+fill(#EFFA5B);
+
+rect(100,100, 150, 250, 20);//弧度
+
+
+
+### 2.多張卡
+
+void setup(){
+
+  size(500,500);
+
+}
+
+int W=25;
+
+void draw(){
+
+  drawCard(100,100);//使用函式
+
+  drawCard(130,130);//使用函式
+
+  drawCard(160,160);//使用函式
+
+}
+
+void drawCard(int x, int y){
+
+  fill(255);
+
+  rect(x-W/2,y-W/2, 150+W, 250+W, 20);//弧度
+
+  fill(#EFFA5B);
+
+  rect(x,y, 150, 250, 20);//弧度
+
+}
+
+
+
+
+### 3.撲克牌
+void setup(){
+  size(500,500);
+}
+int W=25;
+void draw(){
+  drawPokerCard(100,100, "S3");//使用函式
+  drawPokerCard(130,150, "H6");//使用函式
+  drawPokerCard(160,210, "D7");//使用函式
+  drawPokerCard(190,260, "CQ");//使用函式
+}/////牌面:Spade, Heart, Dimand, Club
+void drawPokerCard(int x, int y, String face){
+  fill(255);
+  rect(x-W/2,y-W/2, 150+W, 250+W, 20);//弧度
+  fill(#EFFA5B);
+  rect(x,y, 150, 250, 20);//弧度
+  fill(0);
+  textSize(35);
+  text(face, x, y+35);
+}
+
+
+
+
+### 4.牌面中文字
+void setup(){
+
+  size(500,500);
+
+  PFont font = createFont("標楷體", 35);
+
+  textFont(font);
+
+}
+
+int W=25;
+
+void draw(){
+
+  drawPokerCard(100,100, "黑桃3");//使用函式
+
+  drawPokerCard(130,150, "紅心6");//使用函式
+
+  drawPokerCard(160,210, "方塊7");//使用函式
+
+  drawPokerCard(190,260, "梅花Q");//使用函式
+
+}/////牌面:Spade, Heart, Dimand, Club
+
+void drawPokerCard(int x, int y, String face){
+
+  fill(255);
+
+  rect(x-W/2,y-W/2, 150+W, 250+W, 20);//弧度
+
+  fill(#EFFA5B);
+
+  rect(x,y, 150, 250, 20);//弧度
+
+  fill(0);
+
+  textSize(35);
+
+  text(face, x, y+35);
+
+}
+
+
+
+### 5.中文字變色
+void setup(){
+
+  size(500,500);
+
+  PFont font = createFont("標楷體", 35);
+
+  textFont(font);
+
+}
+
+int W=25;
+
+void draw(){
+
+  drawPokerCard(100,100, "黑桃3");//使用函式
+
+  drawPokerCard(130,150, "紅心6");//使用函式
+
+  drawPokerCard(160,210, "方塊7");//使用函式
+
+  drawPokerCard(190,260, "梅花Q");//使用函式
+
+}/////牌面:Spade, Heart, Dimand, Club
+
+void drawPokerCard(int x, int y, String face){
+
+  fill(255);
+
+  rect(x-W/2,y-W/2, 150+W, 250+W, 20);//弧度
+
+  fill(#EFFA5B);
+
+  rect(x,y, 150, 250, 20);//弧度
+
+  fill(0);//黑色的字
+
+  if( face.indexOf("黑桃") == -1 && face.indexOf("梅花") == -1 ) fill(#FF0000);
+
+  textSize(35);
+
+  text(face, x, y+35);
+
+}
+
+
+
+### 6.隨機選牌
+void setup(){
+
+  size(500,500);
+
+  PFont font = createFont("標楷體", 35);
+
+  textFont(font);
+
+  String [] flower = {"黑桃","紅心","方塊","梅花"};//陣列
+
+  face1 = flower[int(random(4))] + int(random(13)+1);
+
+  face2 = flower[int(random(4))] + int(random(13)+1);
+
+  face3 = flower[int(random(4))] + int(random(13)+1);
+
+  face4 = flower[int(random(4))] + int(random(13)+1);
+
+  //取整數 0...12所以在加1
+
+}
+
+String face1, face2, face3, face4;
+
+int W=25;
+
+void draw(){
+
+  drawPokerCard(100,100, face1);//使用函式
+
+  drawPokerCard(130,150, face2);//使用函式
+
+  drawPokerCard(160,210, face3);//使用函式
+
+  drawPokerCard(190,260, face4);//使用函式
+
+}/////牌面:Spade, Heart, Dimand, Club
+
+void drawPokerCard(int x, int y, String face){
+
+  fill(255);
+
+  rect(x-W/2,y-W/2, 150+W, 250+W, 20);//弧度
+
+  fill(#EFFA5B);
+
+  rect(x,y, 150, 250, 20);//弧度
+
+  fill(0);//黑色的字
+
+  if( face.indexOf("黑桃") == -1 && face.indexOf("梅花") == -1 ) fill(#FF0000);
+
+  textSize(35);
+
+  text(face, x, y+35);
+
+}
+
