@@ -76,7 +76,7 @@ rect(100,100, 150, 250, 20);//弧度
 
 
 ### 2.多張卡
-
+```p
 void setup(){
 
   size(500,500);
@@ -106,11 +106,12 @@ void drawCard(int x, int y){
   rect(x,y, 150, 250, 20);//弧度
 
 }
-
+```
 
 
 
 ### 3.撲克牌
+```p
 void setup(){
   size(500,500);
 }
@@ -130,11 +131,12 @@ void drawPokerCard(int x, int y, String face){
   textSize(35);
   text(face, x, y+35);
 }
-
+```
 
 
 
 ### 4.牌面中文字
+```p
 void setup(){
 
   size(500,500);
@@ -176,10 +178,11 @@ void drawPokerCard(int x, int y, String face){
   text(face, x, y+35);
 
 }
-
+```
 
 
 ### 5.中文字變色
+```p
 void setup(){
 
   size(500,500);
@@ -223,10 +226,11 @@ void drawPokerCard(int x, int y, String face){
   text(face, x, y+35);
 
 }
-
+```
 
 
 ### 6.隨機選牌
+```p
 void setup(){
 
   size(500,500);
@@ -284,4 +288,4 @@ void drawPokerCard(int x, int y, String face){
   text(face, x, y+35);
 
 }
-
+```
