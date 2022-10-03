@@ -292,6 +292,7 @@ void drawPokerCard(int x, int y, String face){
 
 ## week03
 ### 0. Shuffle亂數洗牌(牌會出現一樣)複習
+```p
 void setup(){
   size(500,500);
   PFont font = createFont("標楷體", 35);
@@ -329,7 +330,7 @@ void drawPokerCard(int x, int y, String face){
 }
 
 滑鼠點擊換牌(出現一樣)
-
+```
 
 
 ### 1. 52張牌
